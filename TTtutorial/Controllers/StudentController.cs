@@ -40,8 +40,15 @@ namespace TTtutorial.Controllers
         [HttpPost]
         public ActionResult Edit(Student std)
         {
-            //write code to update student 
-            return RedirectToAction("Index");
+            if (ModelState.IsValid)
+            {
+
+                //write code to update student 
+                ModelState.AddModelError(string.Empty, "test error message.");
+                return View(std);
+            }
+
+            return View(std);
         }
 
         [HttpPut]
