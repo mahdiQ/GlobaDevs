@@ -1,5 +1,6 @@
 ﻿@{
     ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_myLayoutPage.cshtml";
 }
 
 <div class="jumbotron">
@@ -27,3 +28,9 @@
         <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
     </div>
 </div>
+
+@section footer{
+        <p class="lead">
+            This is footer section.
+        </p>
+    }
