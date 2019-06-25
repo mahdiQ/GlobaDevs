@@ -21,6 +21,8 @@ namespace TTtutorial.Controllers
 
         public ActionResult Index()
         {
+            ViewBag.TotalStudents = studentList.Count();
+            ViewData["students"] = studentList;
             return View(studentList);
         }
 

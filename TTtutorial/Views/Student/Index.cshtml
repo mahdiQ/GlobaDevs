@@ -1,11 +1,23 @@
-﻿@model IEnumerable<TTtutorial.Models.Student>
+﻿@using TTtutorial.Models
+@model IEnumerable<TTtutorial.Models.Student>
 
 @{
     ViewBag.Title = "Index";
 }
 
 <h2>Index</h2>
+<label>Total Students(View Bag):</label>  @ViewBag.TotalStudents
 @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+<br />
+<label>Students name (View Data):</label>
+<ul>
+    @foreach (var std in ViewData["students"] as IList<Student>)
+    {
+        <li>
+            @std.StudentName
+        </li>
+    }
+</ul>
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
