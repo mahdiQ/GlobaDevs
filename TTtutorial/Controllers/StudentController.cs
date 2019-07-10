@@ -4,9 +4,11 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using TTtutorial.Models;
+using TTtutorial.Filters;
 
 namespace TTtutorial.Controllers
 {
+    [Log]
     public class StudentController : Controller
     {
         IList<Student> studentList = new List<Student>{

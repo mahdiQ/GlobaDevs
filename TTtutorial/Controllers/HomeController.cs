@@ -12,10 +12,10 @@ namespace TTtutorial.Controllers
     {
         public ActionResult Index()
         {
-            throw new Exception("This is unhandled exception");
-            //TempData["name"] = "Test name";
-            //TempData["age"] = 30;
-            //TempData["myData"] = "Test data";
+            //throw new Exception("This is unhandled exception");
+            TempData["name"] = "Test name";
+            TempData["age"] = 30;
+            TempData["myData"] = "Test data";
             return View();
         }
 

@@ -3,6 +3,7 @@
 
 @{
     ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_myLayoutPage.cshtml";
 }
 
 <h2>Index</h2>
@@ -50,3 +51,10 @@
     }
 
 </table>
+
+
+@section footer{
+    <p class="lead">
+        This is footer section.
+    </p>
+}
